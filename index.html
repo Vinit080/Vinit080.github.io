@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinit | Portfolio</title>
-    <meta name="description" content="Personal portfolio of Vinit, a developer and designer.">
+    <title>Vinit Chakane | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Vinit Chakane, a developer and designer.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Vinit</div>
+        <div class="logo">Vinit Chakane</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -24,7 +24,10 @@
     <main>
         <section class="hero" id="home">
             <div class="hero-content fade-in">
-                <h1>Hi, I'm Vinit</h1>
+                <div class="profile-img-container">
+                    <img src="images/profile.jpg" alt="Vinit Chakane" class="profile-img">
+                </div>
+                <h1>Hi, I'm Vinit Chakane</h1>
                 <h2 id="typing-text"></h2>
                 <p>I build modern, elegant, and high-performance digital experiences.</p>
                 <a href="#projects" class="btn">View My Work</a>
@@ -39,18 +42,118 @@
                         <p>I am a passionate creator focused on building clean, intuitive, and efficient solutions. I value minimalism and functionality, ensuring every project not only looks premium but performs exceptionally well.</p>
                         <p>When I'm not coding, I'm exploring new design trends, learning new technologies, or contributing to the developer community.</p>
                     </div>
-                    <div class="skills">
-                        <span class="skill-tag">Blockchain</span>
-                        <span class="skill-tag">Cloud Computing</span>
-                        <span class="skill-tag">Cyber Security</span>
-                        <span class="skill-tag">Data Science</span>
-                        <span class="skill-tag">Desktop Applications</span>
-                        <span class="skill-tag">DevOps</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Mobile Applications</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Web Development</span>
+                    <div class="domain-grid">
+                        <div class="domain-card">
+                            <svg class="domain-icon blockchain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="10" width="4" height="4" />
+                                <rect x="10" y="5" width="4" height="4" />
+                                <rect class="bc-block" x="17" y="10" width="4" height="4" />
+                                <path class="bc-link l1" d="M7 12l3-5" />
+                                <path class="bc-link l2" d="M14 7l3 5" />
+                            </svg>
+                            <span>Blockchain</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon cloud-comp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M6 16c-2.2 0-4-1.8-4-4s1.8-4 4-4c.3 0 .7.1 1 .2C7.8 5.8 10.1 4 13 4c3.3 0 6 2.7 6 6 0 .2 0 .5-.1.7 1.8.5 3.1 2.2 3.1 4.3 0 2.2-1.8 4-4 4H6z" />
+                                <circle class="packet p1" cx="10" cy="20" r="1.5" fill="currentColor" stroke="none"/>
+                                <circle class="packet p2" cx="16" cy="22" r="1.5" fill="currentColor" stroke="none"/>
+                            </svg>
+                            <span>Cloud Computing</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon cyber-sec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <line class="laser-scan" x1="5" y1="8" x2="19" y2="8" stroke="var(--text-primary)" stroke-width="2" />
+                            </svg>
+                            <span>Cyber Security</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon data-sci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="3" y1="21" x2="21" y2="21" />
+                                <line x1="3" y1="3" x2="3" y2="21" />
+                                <rect class="bar b1" x="6" y="14" width="3" height="7" fill="currentColor" stroke="none" />
+                                <rect class="bar b2" x="11" y="8" width="3" height="13" fill="currentColor" stroke="none" />
+                                <rect class="bar b3" x="16" y="12" width="3" height="9" fill="currentColor" stroke="none" />
+                            </svg>
+                            <span>Data Science</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon desktop-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="M2 8h20" />
+                                <rect class="desk-btn" x="14" y="11" width="5" height="3" rx="0.5" />
+                                <path class="cursor" d="M9 13l4 8 1-3 3 2 1-1-3-2 3-1z" fill="currentColor" stroke="none" />
+                            </svg>
+                            <span>Desktop Apps</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon devops" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="4" cy="12" r="2" />
+                                <circle cx="12" cy="12" r="2" />
+                                <circle cx="20" cy="12" r="2" />
+                                <path class="pipeline-line p1" d="M6 12h4" />
+                                <path class="pipeline-line p2" d="M14 12h4" />
+                                <circle class="pulse-dot" cx="4" cy="12" r="3" fill="var(--text-primary)" stroke="none" />
+                            </svg>
+                            <span>DevOps</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon java-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 9v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9h14z" />
+                                <path d="M17 11h1a3 3 0 0 1 0 6h-1" />
+                                <path class="steam s1" d="M7 6c0-1.5 1-2 1-3" />
+                                <path class="steam s2" d="M11 6c0-1.5 1-2 1-3" />
+                                <path class="steam s3" d="M15 6c0-1.5 1-2 1-3" />
+                            </svg>
+                            <span>Java</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle class="node n1" cx="5" cy="12" r="2" />
+                                <circle class="node n2" cx="12" cy="7" r="2" />
+                                <circle class="node n3" cx="12" cy="17" r="2" />
+                                <circle class="node n4" cx="19" cy="12" r="2" />
+                                <path class="net-line" d="M7 11l3.5-3" />
+                                <path class="net-line" d="M7 13l3.5 3" />
+                                <path class="net-line" d="M13.5 8l3.5 3" />
+                                <path class="net-line" d="M13.5 16l3.5-3" />
+                            </svg>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon mobile-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="5" y="2" width="14" height="20" rx="2" />
+                                <line x1="12" y1="19" x2="12.01" y2="19" stroke-width="2" />
+                                <g class="app-scroll">
+                                    <rect x="7" y="6" width="10" height="4" rx="1" />
+                                    <rect x="7" y="12" width="10" height="4" rx="1" />
+                                    <rect x="7" y="18" width="10" height="4" rx="1" />
+                                </g>
+                            </svg>
+                            <span>Mobile Apps</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon python-snake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path class="py-path1" d="M9 10v-3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6h-4" />
+                                <path class="py-path2" d="M15 14v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-6h4" />
+                                <circle cx="10" cy="7" r="0.5" fill="currentColor" stroke="none" />
+                                <circle cx="14" cy="17" r="0.5" fill="currentColor" stroke="none" />
+                            </svg>
+                            <span>Python</span>
+                        </div>
+                        <div class="domain-card">
+                            <svg class="domain-icon web-dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="M2 8h20" />
+                                <circle cx="6" cy="6" r="1" fill="currentColor" stroke="none"/>
+                                <circle cx="9" cy="6" r="1" fill="currentColor" stroke="none"/>
+                                <path class="code-line l1" d="M5 12h6" />
+                                <path class="code-line l2" d="M5 15h8" />
+                                <rect class="web-btn" x="15" y="12" width="4" height="4" rx="1" />
+                            </svg>
+                            <span>Web Development</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,7 +258,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Vinit. Designed & Built with precision.</p>
+        <p>&copy; 2026 Vinit Chakane. Designed & Built with precision.</p>
     </footer>
 
     <script src="script.js"></script>

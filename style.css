@@ -104,6 +104,26 @@ a:hover {
 
 .hero-content {
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
@@ -154,19 +174,207 @@ a:hover {
     font-size: 1.05rem;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
+.domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
 }
 
-.skill-tag {
-    padding: 0.5rem 1rem;
+.domain-card {
     background: var(--surface-color);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-secondary);
+}
+
+.domain-card span {
+    font-size: 0.85rem;
+    font-weight: 500;
     color: var(--text-primary);
+}
+
+.domain-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.domain-card:hover .domain-icon {
+    color: var(--text-primary);
+}
+
+/* 1. DevOps Animation */
+.domain-card:hover .devops .pulse-dot {
+    animation: devopsPulse 2s infinite;
+}
+@keyframes devopsPulse {
+    0% { transform: translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    40% { transform: translateX(8px); }
+    50% { transform: translateX(8px); }
+    90% { transform: translateX(16px); }
+    100% { transform: translateX(16px); opacity: 0; }
+}
+
+/* 2. Web Dev Animation */
+.domain-card:hover .web-dev .code-line {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    animation: webCode 2s infinite alternate ease-in-out;
+}
+.domain-card:hover .web-dev .code-line.l2 {
+    animation-delay: 0.5s;
+}
+@keyframes webCode {
+    to { stroke-dashoffset: 0; }
+}
+.domain-card:hover .web-dev .web-btn {
+    animation: webBtnPulse 2s infinite;
+}
+@keyframes webBtnPulse {
+    0%, 100% { fill: transparent; }
+    50% { fill: var(--text-primary); }
+}
+
+/* 3. Cyber Security Animation */
+.domain-card:hover .cyber-sec .laser-scan {
+    animation: cyberScan 2s infinite ease-in-out alternate;
+}
+@keyframes cyberScan {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(9px); }
+}
+
+/* 4. Cloud Computing Animation */
+.domain-card:hover .cloud-comp {
+    animation: cloudHover 3s infinite ease-in-out;
+}
+@keyframes cloudHover {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+.domain-card:hover .cloud-comp .packet {
+    animation: packetFloat 2s infinite ease-in;
+}
+.domain-card:hover .cloud-comp .packet.p2 {
+    animation-delay: 1s;
+}
+@keyframes packetFloat {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { transform: translateY(-8px); opacity: 0; }
+    100% { transform: translateY(-8px); opacity: 0; }
+}
+
+/* 5. Data Science Animation */
+.domain-card:hover .data-sci .bar {
+    transform-origin: bottom;
+    animation: barGrow 1.5s infinite alternate ease-in-out;
+}
+.domain-card:hover .data-sci .b2 { animation-delay: 0.3s; }
+.domain-card:hover .data-sci .b3 { animation-delay: 0.6s; }
+@keyframes barGrow {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1); }
+}
+
+/* 6. Machine Learning Animation */
+.domain-card:hover .ml .node {
+    animation: mlNodePulse 1.5s infinite alternate;
+}
+.domain-card:hover .ml .n2 { animation-delay: 0.2s; }
+.domain-card:hover .ml .n3 { animation-delay: 0.4s; }
+.domain-card:hover .ml .n4 { animation-delay: 0.6s; }
+@keyframes mlNodePulse {
+    0% { r: 2; fill: transparent; }
+    100% { r: 3; fill: var(--text-primary); }
+}
+
+/* 7. Blockchain Animation */
+.domain-card:hover .blockchain .bc-block {
+    animation: bcSlide 2s infinite;
+}
+.domain-card:hover .blockchain .bc-link.l2 {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    animation: bcDraw 2s infinite;
+}
+@keyframes bcSlide {
+    0%, 30% { transform: translateX(5px); opacity: 0; }
+    50%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes bcDraw {
+    0%, 50% { stroke-dashoffset: 10; }
+    70%, 100% { stroke-dashoffset: 0; }
+}
+
+/* 8. Mobile Apps Animation */
+.domain-card:hover .mobile-app .app-scroll {
+    animation: appScroll 3s infinite linear;
+}
+@keyframes appScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-6px); }
+}
+
+/* 9. Desktop Apps Animation */
+.domain-card:hover .desktop-app .cursor {
+    animation: cursorMove 2s infinite ease-in-out;
+}
+.domain-card:hover .desktop-app .desk-btn {
+    animation: deskBtnClick 2s infinite;
+}
+@keyframes cursorMove {
+    0% { transform: translate(0, 0); }
+    40%, 60% { transform: translate(3px, -3px); }
+    100% { transform: translate(0, 0); }
+}
+@keyframes deskBtnClick {
+    0%, 45% { fill: transparent; }
+    50%, 55% { fill: var(--text-primary); }
+    60%, 100% { fill: transparent; }
+}
+
+/* 10. Java Animation */
+.domain-card:hover .java-cup .steam {
+    animation: steamRise 2s infinite ease-in;
+}
+.domain-card:hover .java-cup .s2 { animation-delay: 0.4s; }
+.domain-card:hover .java-cup .s3 { animation-delay: 0.8s; }
+@keyframes steamRise {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-4px); opacity: 0; }
+}
+
+/* 11. Python Animation */
+.domain-card:hover .python-snake .py-path1 {
+    animation: pySlide1 2s infinite alternate ease-in-out;
+}
+.domain-card:hover .python-snake .py-path2 {
+    animation: pySlide2 2s infinite alternate ease-in-out;
+}
+@keyframes pySlide1 {
+    0% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+@keyframes pySlide2 {
+    0% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
 }
 
 /* Projects Section */
